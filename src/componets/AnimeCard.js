@@ -5,7 +5,6 @@ const AnimeCard = (props) => {
     let data = props.data;
     let setClicked = props.setClicked;
     let Clicked = props.Clicked;
-    let ClickedData = props.ClickedData;
     let setClickedData = props.setClickedData;
 
     function clickHandler(){

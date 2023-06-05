@@ -26,7 +26,6 @@ const Filers = (props) => {
      const response = await fetch('https://moviesdatabase.p.rapidapi.com/titles?list='+filed+'&limit=10', options);
       
      const result = await response.json();
-     console.log(result);
      setData(result.results);
      setLoading(false);
   }

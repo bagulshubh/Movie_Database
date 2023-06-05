@@ -13,14 +13,12 @@ const Navbar = (props) => {
   const navigate = useNavigate();
   let filterClicked = props.filterClicked;
   let setFilterClicked = props.setFilterClicked;
-  let filed = props.filed;
   let setFeiled = props.setFeiled;
   let DarkMode = props.DarkMode;
   let setDarkMode = props.setDarkMode;
 
   function changeHandler(event){
-    
-      setTitle(event.target.value);
+    setTitle(event.target.value);
   }
   function clickHandler(){
     setFilterClicked(false);
@@ -47,7 +45,6 @@ const Navbar = (props) => {
     let newstr = event.target.innerHTML.toLowerCase().replaceAll(' ','_');
     setFeiled("");
     setFeiled(newstr);
-    console.log(newstr);
   }
   function modeHandler(){
     setDarkMode(!DarkMode);

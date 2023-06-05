@@ -34,7 +34,7 @@ function App() {
       const convertedresponse = await response.json();
       if (convertedresponse.Response==="True") {
         setOutput(convertedresponse);
-        console.log(convertedresponse);
+    
         if(title!==""){
           setisInput(true);
         }
@@ -63,7 +63,7 @@ function App() {
      const firstResult = await response.json();
      setfirstPageData(firstResult.results);
      setloading(false);
-    console.log("This is firstpage result",firstResult);
+    
   }
 
   
@@ -98,9 +98,6 @@ function App() {
           <Route path='/filter' element={<Filters filed={filed} setFeiled={setFeiled} filterClicked={filterClicked} setFilterClicked={setFilterClicked} title={title} setTitle={setTitle} DarkMode={DarkMode}></Filters>}> </Route>
 
         </Routes>
-
-        
-
 
       </div>
     </div>

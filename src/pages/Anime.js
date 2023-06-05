@@ -20,7 +20,7 @@ const Anime = (props) => {
     setData(output.data);
     setloading(false)
   }
-  console.log(Data)
+  
   useEffect(()=>{
     fecthApi();
   },[])

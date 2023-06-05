@@ -77,7 +77,7 @@ const Search = (props) => {
                                 </div>
                             </div>
                             <div className='watch-con'>
-                                    <a className='watch-text' href={'https://solarmovie.pe/search/'+data.Title.replace(/\s+/g, '-')} target='blank'>Watch Now 
+                                    <a className='watch-text'>Watch Now 
                                     <FaPlay></FaPlay>
                                     </a>
                             </div>

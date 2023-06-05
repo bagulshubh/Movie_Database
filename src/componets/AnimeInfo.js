@@ -3,14 +3,14 @@ import {FaPlay} from 'react-icons/fa'
 
 const AnimeInfo = (props) => {
     let data = props.ClickedData;
-    console.log(data);
+
   return (
     <div className='anime-info-card'> 
 
         <div className='anime-hero'>
             <div className='anime-basic'>
-                <p className='anime-info-text heading-eng'>{data.title_english}</p>
-                <p className='anime-info-text heading-jpn'>{data.title_japanese}</p>
+                <p className='anime-info-text heading-eng head'>{data.title_english}</p>
+                <p className='anime-info-text heading-jpn head'>{data.title_japanese}</p>
 
                 <img src={data.images.jpg.large_image_url} className='anime-info-img'></img>
 
@@ -62,11 +62,20 @@ const AnimeInfo = (props) => {
  
 
         <div className='trailer-con'>
-            <p className='trailer-heading'> Trailer</p>
-            <a href={data.trailer.url} target='blank' className='trailer-link'>
-            <img src={data.trailer.images.large_image_url} className='trailer-img'></img>
-            <FaPlay className='play-icon'></FaPlay>
-            </a>
+
+            {
+                data.trailer.images.large_image_url===null ? (<div>Trailer not found</div>):(
+                    <div>
+                        <p className='trailer-heading'> Trailer</p>
+                        <a href={data.trailer.url} target='blank' className='trailer-link'>
+                        <img src={data.trailer.images.large_image_url} className='trailer-img'></img>
+                        <FaPlay className='play-icon'></FaPlay>
+                        </a>
+                    </div>
+                )
+            }
+
+            
         </div>
 
        

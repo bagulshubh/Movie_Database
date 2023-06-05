@@ -23,7 +23,6 @@ const Datafiled = (props) => {
         }
         else{
             const output = await response.json();
-            console.log(output);
             setChangedata(output);
         }
         setLoading(false);
@@ -31,7 +30,6 @@ const Datafiled = (props) => {
 
     useEffect( ()=>{
         fecthApi();
-         console.log(changedata);
     },[title])
 
   return (

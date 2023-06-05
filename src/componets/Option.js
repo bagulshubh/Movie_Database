@@ -1,12 +1,10 @@
 import React from 'react'
-import { MdDarkMode } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom'
 
 const Option = (props) => {
   let navigate = useNavigate();
   let setTitle = props.setTitle;
   let setpage = props.setpage;
-  let filterClicked=props.filterClicked;
   let setFilterClicked = props.setFilterClicked;
   let DarkMode = props.DarkMode;
 
